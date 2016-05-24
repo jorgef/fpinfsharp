@@ -9,11 +9,11 @@ let paul = { name = "Paul"; department = "Sales"; manager = None }
 let ben' = { name = "Ben"; department = "Sales"; manager = Some paul }
 let employees = [bob; joe; ben; paul; ben']
 
-// Implement
-let lookupManagerName (employeeName: string) (defaultName: string) (employees: Employee list) : string list =
-    failwith ""
+// Implement! It returns the manager name of the employees that have the specified name
+let lookupManagerNames (employeeName: string) (employees: Employee list) : string list =
+    failwith "Not Implemented"
 
-Assert.isTrue (lookupManagerName "Joe" "N/A" employees = ["Bob"])
-Assert.isTrue (lookupManagerName "Ben" "N/A" employees = ["Bob"; "Paul"])
-Assert.isTrue (lookupManagerName "Bob" "N/A" employees = ["N/A"])
-Assert.isTrue (lookupManagerName "Paul" "N/A" employees = ["N/A"])
+Assert.isTrue (lookupManagerNames "Joe" employees = ["Bob"])
+Assert.isTrue (lookupManagerNames "Ben" employees = ["Bob"; "Paul"])
+Assert.isTrue (lookupManagerNames "Bob" employees = [])
+Assert.isTrue (lookupManagerNames "Paul" employees = [])
